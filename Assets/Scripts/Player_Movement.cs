@@ -31,7 +31,6 @@ public class Player_Movement : MonoBehaviour {
         {
             rb.AddForce(new Vector3(0f, jump_height, 0f));
         }
-        transform.rotation.Set(0f, 0f, 0f, 0f);
     }
 
     public bool isGrounded()
