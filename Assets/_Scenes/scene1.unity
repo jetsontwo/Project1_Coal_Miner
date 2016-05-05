@@ -784,6 +784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2051406431}
+  direction: 0
 --- !u!1 &2051406431 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: c4f0d64f558a8a742aef534df1773712, type: 3}
@@ -826,7 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9be01e1c593214aab92bfccbed16d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 20
+  spd: 50
   jump_height: 500
   c: {fileID: 995192371}
 --- !u!4 &2051406438 stripped
