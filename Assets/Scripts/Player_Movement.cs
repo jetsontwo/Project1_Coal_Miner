@@ -9,20 +9,20 @@ public class Player_Movement : MonoBehaviour {
     private bool grounded;
     private Rigidbody rb;
     private Transform c_loc;
+    public int coal_count;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
         grounded = false;
         c_loc = c.transform;
+        coal_count = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         move_Horiz = -Input.GetAxis("Horizontal");
         move_Vert = -Input.GetAxis("Vertical");
-        print(move_Horiz);
-        print(move_Horiz * Time.deltaTime);
         if (rb.velocity.magnitude < 10)
         {
             rb.AddForce(new Vector3(move_Horiz * spd, 0, move_Vert * spd));
@@ -47,5 +47,16 @@ public class Player_Movement : MonoBehaviour {
     void OnCollisionExit(Collision c)
     {
         grounded = false;
+    }
+
+    void OnTriggerEnter(Collider c)
+    {
+        if (c.gameObject.tag == "Coal")
+        {
+            c.gameObject.SetActive(false);
+            coal_count += 1;
+            print(coal_count);
+        }
+
     }
 }
