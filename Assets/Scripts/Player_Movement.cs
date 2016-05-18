@@ -32,8 +32,9 @@ public class Player_Movement : MonoBehaviour {
         move_Vert = -Input.GetAxis("Vertical");
         if (rb.velocity.magnitude < 10)
         {
-            print(transform.forward);
-            rb.AddForce(new Vector3(move_Horiz * spd * transform.forward.x, 0, move_Vert * spd * transform.forward.z));
+            print(transform.up);
+            print(transform.right);
+            rb.AddForce(new Vector3(move_Horiz * spd * transform.up.x, 0, move_Vert * spd * transform.right.z));
         }
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
