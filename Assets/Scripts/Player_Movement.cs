@@ -31,7 +31,7 @@ public class Player_Movement : MonoBehaviour {
         mouse_current = Input.mousePosition;
         move_Horiz = -Input.GetAxis("Horizontal");
         move_Vert = Input.GetAxis("Vertical");
-        if (rb.velocity.magnitude < 10 && grounded)
+        if (rb.velocity.magnitude < 15 && grounded)
         {
             rb.AddForce(transform.up * move_Vert * spd);
             rb.AddForce(transform.right * move_Horiz * spd);

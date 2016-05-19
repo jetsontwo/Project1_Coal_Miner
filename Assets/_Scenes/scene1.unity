@@ -98,11 +98,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4f0d64f558a8a742aef534df1773712, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.04
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4f0d64f558a8a742aef534df1773712, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.9
+      value: -47.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4f0d64f558a8a742aef534df1773712, type: 3}
       propertyPath: m_LocalRotation.x
@@ -201,7 +201,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 9855419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.37028, y: 0.2010994, z: 0.22951}
+  m_LocalPosition: {x: -0.37028, y: 0.2010994, z: -19.4}
   m_LocalScale: {x: 2.517049, y: 2.5170505, z: 2.5170505}
   m_Children: []
   m_Father: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - 64: {fileID: 206609122}
   - 23: {fileID: 206609121}
   m_Layer: 0
-  m_Name: Plane (4)
+  m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +276,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206609120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.1, y: -1.5, z: -41.5}
+  m_LocalPosition: {x: -16.1, y: -4.8, z: -41.5}
   m_LocalScale: {x: 2.517049, y: 2.5170505, z: 2.5170505}
   m_Children: []
   m_Father: {fileID: 0}
@@ -623,6 +623,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 3
   length: 20
+  height_between_low: -2
+  height_between_high: 2
+  dist_between_z: 40
+  dist_between_x: 25
 --- !u!1 &1065562650 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 84850c7616c747c4d98d8de5e5bfc775, type: 3}
@@ -1221,9 +1225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9be01e1c593214aab92bfccbed16d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 50
+  spd: 75
   jump_height: 500
-  turn_speed: 2.5
+  turn_speed: 2
   c: {fileID: 995192371}
   coal_count: 0
 --- !u!4 &2051406438 stripped
