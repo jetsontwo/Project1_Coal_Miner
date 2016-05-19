@@ -7,6 +7,7 @@ public class Player_Movement : MonoBehaviour {
     public float turn_speed;
     public Camera c;
     private float move_Horiz, move_Vert, speed_mult;
+    private Vector3 mod;
     private bool grounded, tracking;
     private Rigidbody rb;
     private Transform c_loc;
@@ -29,12 +30,11 @@ public class Player_Movement : MonoBehaviour {
 	void Update () {
         mouse_current = Input.mousePosition;
         move_Horiz = -Input.GetAxis("Horizontal");
-        move_Vert = -Input.GetAxis("Vertical");
-        if (rb.velocity.magnitude < 10)
+        move_Vert = Input.GetAxis("Vertical");
+        if (rb.velocity.magnitude < 10 && grounded)
         {
-            print(transform.up);
-            print(transform.right);
-            rb.AddForce(new Vector3(move_Horiz * spd * transform.up.x, 0, move_Vert * spd * transform.right.z));
+            rb.AddForce(transform.up * move_Vert * spd);
+            rb.AddForce(transform.right * move_Horiz * spd);
         }
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
