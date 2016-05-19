@@ -31,11 +31,12 @@ public class Player_Movement : MonoBehaviour {
         mouse_current = Input.mousePosition;
         move_Horiz = -Input.GetAxis("Horizontal");
         move_Vert = Input.GetAxis("Vertical");
-        if (rb.velocity.magnitude < 15 && grounded)
+        if (rb.velocity.magnitude < 15)
         {
             rb.AddForce(transform.up * move_Vert * spd);
             rb.AddForce(transform.right * move_Horiz * spd);
         }
+
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             rb.AddForce(new Vector3(0f, jump_height, 0f));

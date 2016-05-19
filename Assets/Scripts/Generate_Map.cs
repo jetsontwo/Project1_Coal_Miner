@@ -13,7 +13,8 @@ public class Generate_Map : MonoBehaviour {
         plat_data[] platform_loc = new plat_data[length];
         for (int i = 0; i < length; i++)
         {
-            int choice = Random.Range(0,2);
+            int choice = Random.Range(0,3);
+            print(choice);
             platform_loc[i] = new plat_data(true, choice, Random.Range(-3, 5));
 
             int ychoice = platform_loc[i].height;
@@ -23,8 +24,10 @@ public class Generate_Map : MonoBehaviour {
                 ychoice = platform_loc[i-1].height + Random.Range(height_between_low, height_between_high);
             }
 
-            Instantiate(platform_object, new Vector3(choice * dist_between_x + Random.Range(-5,5), ychoice, i * dist_between_z + Random.Range(-5,5)), Quaternion.identity);
+            GameObject temp_obj = (GameObject) Instantiate(platform_object, new Vector3(choice * dist_between_x + Random.Range(-5,5), ychoice, i * dist_between_z + Random.Range(-5,5)), Quaternion.identity);
+            temp_obj.transform.parent = platform_object.transform.parent;
         }
+
 	}
 
 
