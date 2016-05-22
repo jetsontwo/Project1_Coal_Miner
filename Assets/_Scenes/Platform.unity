@@ -106,19 +106,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4f0d64f558a8a742aef534df1773712, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.00000011520229
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4f0d64f558a8a742aef534df1773712, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.70710695
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4f0d64f558a8a742aef534df1773712, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071066
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4f0d64f558a8a742aef534df1773712, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.00000011520235
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4f0d64f558a8a742aef534df1773712, type: 3}
       propertyPath: m_RootOrder
@@ -489,6 +489,7 @@ GameObject:
   - 124: {fileID: 995192369}
   - 81: {fileID: 995192368}
   - 114: {fileID: 995192373}
+  - 114: {fileID: 995192374}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -580,6 +581,19 @@ MonoBehaviour:
   height_between_high: 2
   dist_between_z: 40
   dist_between_x: 25
+  scene_switcher: {fileID: 995192374}
+  pm: {fileID: 0}
+--- !u!114 &995192374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995192367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90deefa4164e4ed498841d3698a529f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1065562650 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 84850c7616c747c4d98d8de5e5bfc775, type: 3}

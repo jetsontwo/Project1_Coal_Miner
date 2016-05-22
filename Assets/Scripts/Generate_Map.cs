@@ -6,6 +6,8 @@ public class Generate_Map : MonoBehaviour {
     public int width, length;
     public int height_between_low, height_between_high, dist_between_z, dist_between_x;
     private GameObject platform_object;
+    public Scene_Switcher scene_switcher;
+    public Player_Movement pm;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +31,16 @@ public class Generate_Map : MonoBehaviour {
         }
 
 	}
+
+    void Update()
+    {
+        if (Time.time >= 5)
+        {
+            scene_switcher.Change_Scene();
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
 
 
 
