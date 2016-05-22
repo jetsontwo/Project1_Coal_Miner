@@ -36,9 +36,9 @@ public class Generate_Map : MonoBehaviour {
     {
         if (Time.time >= 5)
         {
-            scene_switcher.Change_Scene();
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //scene_switcher.Change_Scene();
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
         }
     }
 
