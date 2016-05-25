@@ -106,6 +106,7 @@ public class Player_Movement : MonoBehaviour {
         if (c.gameObject.tag == "Coal")
         {
             c.gameObject.SetActive(false);
+            //Play pickup sound
             coal_count += 1;
             print(coal_count);
         }

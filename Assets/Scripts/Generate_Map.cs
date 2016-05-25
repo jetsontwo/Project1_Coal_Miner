@@ -34,11 +34,11 @@ public class Generate_Map : MonoBehaviour {
 
     void Update()
     {
-        if (Time.time >= 5)
+        if (Time.time >= 30)
         {
-            //scene_switcher.Change_Scene();
-            //Cursor.visible = true;
-            //Cursor.lockState = CursorLockMode.None;
+            scene_switcher.Change_Scene();
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
