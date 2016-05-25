@@ -34,7 +34,7 @@ public class Generate_Map : MonoBehaviour {
 
     void Update()
     {
-        if (Time.time >= 30)
+        if (Time.time >= 45)
         {
             scene_switcher.Change_Scene();
             Cursor.visible = true;
