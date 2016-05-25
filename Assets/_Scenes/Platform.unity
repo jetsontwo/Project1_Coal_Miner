@@ -285,6 +285,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d665bfeb92e1c9447b075eb43730b3bd, type: 2}
+    - target: {fileID: 100002, guid: 8f66c8e323fd2a548851e05e2fe0e725, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f66c8e323fd2a548851e05e2fe0e725, type: 3}
   m_IsPrefabParent: 0
@@ -630,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   width: 3
-  length: 20
+  length: 200
   height_between_low: -2
   height_between_high: 2
   dist_between_z: 40
@@ -949,6 +953,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1338541634}
   pm: {fileID: 1338541631}
+--- !u!1 &1451057109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1451057114}
+  - 33: {fileID: 1451057113}
+  - 64: {fileID: 1451057112}
+  - 114: {fileID: 1451057110}
+  m_Layer: 0
+  m_Name: Death_Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1451057110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1451057109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6b8f96ec5ac4549a49ce6b5d4e7611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s: {fileID: 995192374}
+--- !u!64 &1451057112
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1451057109}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1451057113
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1451057109}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1451057114
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1451057109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 37, y: -94, z: 607}
+  m_LocalScale: {x: 78.94, y: 1, z: 114.2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1001 &1471031121
 Prefab:
   m_ObjectHideFlags: 0
@@ -1055,7 +1120,7 @@ GameObject:
   - 4: {fileID: 1741515413}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

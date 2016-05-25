@@ -11,16 +11,6 @@ public class Animation_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (pm.jumping && pm.isGrounded()){;
-            animator.Play("Jump_GROUND_blocking", -1, 0f);
-        }
-        else if (pm.jumping)
-        {
-            animator.Play("Jump_InAir_blocking", -1, 0f);
-        }
-        else if (pm.isGrounded())
-        {
-            animator.Play("Jump_Landing_blocking_", -1, 0f);
-        }
+   
 	}
 }

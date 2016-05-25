@@ -8,7 +8,8 @@ public class Character_Status : MonoBehaviour {
     public Button heal_button;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         heal_button.enabled = false;
         
 	}
