@@ -6,9 +6,16 @@ public class Wall_Push : MonoBehaviour {
     public GameObject player;
     private Player_Movement pm;
     private Rigidbody rb;
+    public Dir direction;
 
-	// Use this for initialization
-	void Start () {
+
+    public enum Dir
+    {
+        Left_Faces_In, Right_Faces_In
+    }
+
+    // Use this for initialization
+    void Start () {
         rb = player.GetComponent<Rigidbody>();
         pm = player.GetComponent<Player_Movement>();
 	}
