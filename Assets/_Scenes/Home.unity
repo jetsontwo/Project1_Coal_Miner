@@ -1000,6 +1000,7 @@ MonoBehaviour:
   hunger: 0
   sickness: 0
   heal_button: {fileID: 143813232}
+  s: {fileID: 1820084400}
 --- !u!1001 &1053928798
 Prefab:
   m_ObjectHideFlags: 0
@@ -1546,6 +1547,7 @@ GameObject:
   - 81: {fileID: 1820084393}
   - 114: {fileID: 1820084398}
   - 82: {fileID: 1820084399}
+  - 114: {fileID: 1820084400}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1705,6 +1707,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1820084400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1820084392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45901340b765303419d02a3fba1c8330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 50
 --- !u!1 &1842197178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,6 +1834,7 @@ MonoBehaviour:
   hunger: 0
   sickness: 0
   heal_button: {fileID: 48299235}
+  s: {fileID: 1820084400}
 --- !u!1 &1958536818
 GameObject:
   m_ObjectHideFlags: 0

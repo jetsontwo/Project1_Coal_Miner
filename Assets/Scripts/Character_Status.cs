@@ -26,7 +26,6 @@ public class Character_Status : MonoBehaviour {
 
     public void feed()
     {
-        print("feediong");
-        print(gameObject);
+        s.Buy_Food(this);
     }
 }
