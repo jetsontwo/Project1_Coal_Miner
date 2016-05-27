@@ -15,8 +15,11 @@ public class Player_Movement : MonoBehaviour {
     public int coal_count;
     private Vector3 mouse_past, mouse_current;
     public bool jumping, walking;
+<<<<<<< HEAD
     public Text coal_counter;
     public Animator anim;
+=======
+>>>>>>> origin/master
 
 	// Use this for initialization
 	void Start () {
@@ -35,9 +38,15 @@ public class Player_Movement : MonoBehaviour {
         mouse_current = Input.mousePosition;
         move_Horiz = Input.GetAxis("Horizontal");
         move_Vert = Input.GetAxis("Vertical");
+<<<<<<< HEAD
         anim.SetFloat("walk_forward", move_Vert);
         if (rb.velocity.magnitude < 30)
         {
+=======
+        if (rb.velocity.magnitude < 30)
+        {
+            print("working");
+>>>>>>> origin/master
             rb.AddForce(transform.forward * move_Vert * spd);
             rb.AddForce(transform.right * move_Horiz * spd);
         }
@@ -110,8 +119,13 @@ public class Player_Movement : MonoBehaviour {
         {
             c.gameObject.SetActive(false);
             //Play pickup sound
+<<<<<<< HEAD
             coal_count += 5;
             coal_counter.text =  "Money: $" + coal_count;
+=======
+            coal_count += 1;
+            print(coal_count);
+>>>>>>> origin/master
         }
 
     }

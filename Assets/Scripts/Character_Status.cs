@@ -6,7 +6,10 @@ public class Character_Status : MonoBehaviour {
 
     public int cold, hunger, sickness;
     public Button heal_button;
+<<<<<<< HEAD
     public Store_Script s;
+=======
+>>>>>>> origin/master
 
 	// Use this for initialization
 	void Start ()
@@ -26,6 +29,11 @@ public class Character_Status : MonoBehaviour {
 
     public void feed()
     {
+<<<<<<< HEAD
         s.Buy_Food(this);
+=======
+        print("feediong");
+        print(gameObject);
+>>>>>>> origin/master
     }
 }
