@@ -13,40 +13,44 @@ public class Player_Movement : MonoBehaviour {
     private Rigidbody rb;
     private Transform c_loc;
     public int coal_count;
-    private Vector3 mouse_past, mouse_current;
     public bool jumping, walking;
-<<<<<<< HEAD
-    public Text coal_counter;
+    public Text coal_counter, day_counter;
     public Animator anim;
-=======
->>>>>>> origin/master
+    private AudioSource AS;
+    private int coal_price;
+
 
 	// Use this for initialization
 	void Start () {
+        if (PlayerPrefs.HasKey("Has_Played"))
+        {
+            coal_count = PlayerPrefs.GetInt("money");
+            coal_price = PlayerPrefs.GetInt("coal_price");
+        }
+        else
+        {
+            coal_count = 0;
+            PlayerPrefs.SetInt("money", 0);
+            PlayerPrefs.SetInt("coal_price", 5);
+        }
+        day_counter.text = "Day: " + PlayerPrefs.GetInt("Night_Count");
         rb = GetComponent<Rigidbody>();
         grounded = false;
         c_loc = c.transform;
-        coal_count = 0;
-        mouse_past = Input.mousePosition;
-        mouse_current = Input.mousePosition;
+
         Cursor.lockState = CursorLockMode.Locked;
         tracking = true;
+        AS = GetComponent<AudioSource>();
+        coal_counter.text = "Money: $" + coal_count;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        mouse_current = Input.mousePosition;
         move_Horiz = Input.GetAxis("Horizontal");
         move_Vert = Input.GetAxis("Vertical");
-<<<<<<< HEAD
-        anim.SetFloat("walk_forward", move_Vert);
+        anim.SetFloat("walking", move_Vert);
         if (rb.velocity.magnitude < 30)
         {
-=======
-        if (rb.velocity.magnitude < 30)
-        {
-            print("working");
->>>>>>> origin/master
             rb.AddForce(transform.forward * move_Vert * spd);
             rb.AddForce(transform.right * move_Horiz * spd);
         }
@@ -64,11 +68,11 @@ public class Player_Movement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             rb.AddForce(new Vector3(0f, jump_height, 0f));
-            jumping = true;
+            anim.SetBool("jumped", true);
         }
         else if (grounded)
         {
-            jumping = false;
+            anim.SetBool("jumped", false);
         }
 
         if (tracking)
@@ -94,7 +98,9 @@ public class Player_Movement : MonoBehaviour {
                 tracking = true;
             }
         }
-        
+        PlayerPrefs.SetInt("money", coal_count);
+
+
     }
 
     public bool isGrounded()
@@ -106,11 +112,13 @@ public class Player_Movement : MonoBehaviour {
     {
         if (c.gameObject.tag == "Ground"){
             grounded = true;
+            anim.SetBool("landed", true);
         }
     }
     void OnCollisionExit(Collision c)
     {
         grounded = false;
+        anim.SetBool("landed", false);
     }
 
     void OnTriggerEnter(Collider c)
@@ -118,14 +126,10 @@ public class Player_Movement : MonoBehaviour {
         if (c.gameObject.tag == "Coal")
         {
             c.gameObject.SetActive(false);
-            //Play pickup sound
-<<<<<<< HEAD
-            coal_count += 5;
+            AS.Play();
+            coal_count += coal_price;
             coal_counter.text =  "Money: $" + coal_count;
-=======
-            coal_count += 1;
-            print(coal_count);
->>>>>>> origin/master
+
         }
 
     }
